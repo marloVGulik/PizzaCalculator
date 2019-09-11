@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- plaatje erbij -->
+	<style type="text/css"> 
+		body { 
+			background-image: url("https://ak2.picdn.net/shutterstock/videos/1014004172/thumb/1.jpg");
+			background-size: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css"> <!-- script linking -->
+	<title>pizza calculator</title>
+</head>
+<body>
+ <div style="background-color: #FFFFFF99">
+ 	<h1>Pizza calculator</h1>
+ 	<form id="AddNewPizza" onsubmit="AddPizza();return false">
+ 		<input type="radio" name="PizzaToAdd" value="Small">Kleine pizza (25 cm, €8,99)</input>  <!-- Pizza selector -->
+ 		<input type="radio" name="PizzaToAdd" value="Medium">Medium pizza (30 cm, €11,50)</input>
+ 		<input type="radio" name="PizzaToAdd" value="Large">Grote pizza (35 cm, €13,50)</input>
+ 		<br>
+ 		<br>
+ 		<input id="AmountOfPizzaAdded" type="number" value="1"> Aantal pizza's</input> <!-- Aantal pizza's -->
+ 		<input name="AddedPizza" type="submit" value="Add pizza"></button> <!-- submit knop -->
+ 	</form>
+ 
+ 
+ 	<div>
+ 		<h2>Pizza lijst:</h2> <!-- pizza lijst en prijzen in html aangeven -->
+ 		<div id="AllPizzaList"></div>
+ 		<p id="Prices">
+ 	</div>
+ </div>
+ 
+ 
+</body>
+</html>
