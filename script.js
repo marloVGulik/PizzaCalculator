@@ -11,12 +11,14 @@ var Medium = [Name='Middel pizza', Price=11.50, Size=30];
 var Large = [Name='Grote pizza', Price=13.50, Size=35];
 var Pizzas = [Small, Medium, Large];
 var PizzaList = [];
-var AddedPizza;
 var PizzaCount = [0, 0, 0];
 
 // Variablen uitgerekent of submit variablen
 var AddedPizza;
-var Price = 0
+var PriceTotal = 0;
+var PriceSmall = 0;
+var PriceMedium = 0;
+var PriceLarge = 0;
 
 
 // Main functie (Update wanneer er op de post knop gedrukt word)
@@ -54,8 +56,14 @@ function AddPizza() {
 	document.getElementById("AllPizzaList").innerHTML = 'Kleine pizzas: ' + PizzaCount[0] + ', medium pizzas: ' + PizzaCount[1] + ' en large pizzas: ' + PizzaCount[2];
 
 	// Pizza calculator (prijs), ook zet hij de pizza's in een <p>
-	Price = PizzaCount[0] * Small[1] + PizzaCount[1] * Medium[1] + PizzaCount[2] * Large[1];
-	document.getElementById("Prices").innerHTML = 'Totale prijs: €' + Price;
+	PriceSmall = PizzaCount[0] * Small[1];
+	PriceMedium = PizzaCount[1] * Medium[1];
+	PriceLarge = PizzaCount[2] * Large[1];
+	Price = PriceSmall + PriceMedium + PriceLarge;
+	document.getElementById("SmallPrice").innerHTML = 'Kleine pizza prijs: €' + PriceSmall;
+	document.getElementById("MediumPrice").innerHTML = 'Medium pizza prijs: €' + PriceMedium;
+	document.getElementById("LargePrice").innerHTML = 'Grote pizza prijs prijs: €' + PriceLarge;
+	document.getElementById("TotalPrice").innerHTML = 'Totale prijs: €' + Price;
 }
 
 
