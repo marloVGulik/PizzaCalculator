@@ -6,9 +6,9 @@
 // Variablen maken
 
 // Pizza variablen
-var Small = [Name='Kleine pizza', Price=8.99, Size=25];
-var Medium = [Name='Middel pizza', Price=11.50, Size=30];
-var Large = [Name='Grote pizza', Price=13.50, Size=35];
+const Small = [Name='Kleine pizza', Price=8.99, Size=25];
+const Medium = [Name='Middel pizza', Price=11.50, Size=30];
+const Large = [Name='Grote pizza', Price=13.50, Size=35];
 var Pizzas = [Small, Medium, Large];
 var PizzaList = [];
 var PizzaCount = [0, 0, 0];
@@ -65,7 +65,5 @@ function AddPizza() {
 	document.getElementById("LargePrice").innerHTML = 'Grote pizza prijs prijs: €' + PriceLarge;
 	document.getElementById("TotalPrice").innerHTML = 'Totale prijs: €' + Price;
 }
-
-
 
 
